@@ -24,6 +24,19 @@ RSpec.configure do |config|
 
   config.include Futebol
 
+  config.before(:suite){
+    p '--->>>> Antes de toda Suite de Teste <<<<---'
+  }
+  config.after(:suite){
+    p '--->>>> Depois de toda Suite de Teste <<<<---'
+  }
+  config.before(:context){
+    p '--->>>> Antes de cada contex criado <<<<---'
+  }
+  config.after(:context){
+    p '--->>>> Depois de cada context criado <<<<---'
+  }
+
 
 
   config.expect_with :rspec do |expectations|

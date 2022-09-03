@@ -10,7 +10,7 @@ RSpec.describe 'be_within' do
   end
 
   describe 'com ALL' do
-    
+
     it { expect([11.5,12.0,12.5]).to all(be_within(0.5).of(12)) }
   end
 end
