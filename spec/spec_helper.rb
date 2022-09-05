@@ -21,6 +21,12 @@ RSpec.configure do |config|
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
 
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true
+    # Falhas agregadas vai permitir que todos os testes de um
+    # it{...} sejam avaliados, não quebrando no primeiro caso
+    # de falha.
+  end
 
   config.include Futebol
 

@@ -1,10 +1,10 @@
-$counter = 0
+$counter_let_bang = 0
 
 describe 'let!' do
   ordem_invocacao = []
   let!(:count) do
     ordem_invocacao << :let!
-    $counter += 1
+    $counter_let_bang += 1
   end
 
   it 'chama o método helper antes do teste' do

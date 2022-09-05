@@ -1,7 +1,7 @@
-$counter=0
+$counter_let = 0
 
 describe 'let' do
-  let(:count) { $counter +=1 }
+  let(:count) { $counter_let += 1 }
 
   it 'memoriza o valor' do
     expect(count).to eq(1) # primeira vez
