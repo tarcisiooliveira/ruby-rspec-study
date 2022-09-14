@@ -10,9 +10,15 @@ end
 describe 'Pessoa' do
   subject(:pessoa) { Pessoa.new }
 
+  #O include não lança a mensagem informativa que o behaves e should_behave lançam
   include_examples 'status', :feliz
+
+  # behaves like status
   it_behaves_like 'status', :triste
+  # it should behave like status
   it_should_behave_like 'status', :contente
+
+  #Cada um desses acima executa os testes compartilhados
 
   # it 'feliz!' do
   #   pessoa.feliz!
