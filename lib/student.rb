@@ -5,4 +5,8 @@ class Student
     # retornaria true ou false
   end
 
+  def message(text)
+    # some_string
+  end
+
 end
