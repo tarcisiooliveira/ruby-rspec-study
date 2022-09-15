@@ -1,8 +1,8 @@
 require 'course'
 require 'student'
 
-# stub nada mais é do que forçar uma resposta específica para um determinado
-# metodo de um objeto
+# stub nada mais é do que forçar uma resposta específica
+# para um determinado metodo de um objeto
 
 describe 'Stub' do
   before do
@@ -13,7 +13,9 @@ describe 'Stub' do
     # with restringe os argumentos que serão recebidos
     # with
 
-    allow(@student).to receive(:has_finished?).with(an_instance_of(Course)).and_return(true)
+    allow(@student).to receive(:has_finished?)
+                        .with(an_instance_of(Course))
+                        .and_return(true)
   end
 
   it { expect(@student.has_finished?(@course)).to be_truthy }
@@ -38,7 +40,7 @@ describe 'Stub' do
     second_student = Student.new
 
     allow_any_instance_of(Student).to receive(:message).and_return("Hi!!")
-    
+
     expect(student.message(:hi)).to eq('Hi!!')
     expect(second_student.message(:hi)).to eq('Hi!!')
   end

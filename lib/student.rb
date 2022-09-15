@@ -9,4 +9,12 @@ class Student
     # some_string
   end
 
+  def foo
+    # some_string
+  end
+
+  def bar(param)
+    # some_string
+  end
+
 end
